@@ -6,15 +6,15 @@
 *
 * Retrun: nothing if it's successfull
 */
-int main(void)
+int main(void) 
 {
-       char output[] = "_putchar\n";
-       int i;
+	char output[] = "_putchar\n";
+        int i;
 
-       for (i = 0; output[i] != '\0'; i++)
-       {
-              _putchar(output[i]);
-       }
+        for (i = 0; output[i] != '\0'; i++) 
+	{
+		_putchar(output[i]);
+        }
        
-       return (0);
+        return (0);
 }
