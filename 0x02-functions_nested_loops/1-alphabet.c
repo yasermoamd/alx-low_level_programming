@@ -4,9 +4,15 @@
  *
  *
  * return nothing if its successful
+ *
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		_putchar(c);
+	}	
 	return (0);
 }
