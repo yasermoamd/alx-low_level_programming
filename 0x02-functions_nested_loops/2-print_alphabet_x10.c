@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - single char
+ * print_alphabet - single char
  *
  * Return: single chars
  */
@@ -16,5 +16,6 @@ void print_alphabet_x10(void)
 			_putchar(c);
 		}
 		_putchar('\n');
+
 	}
 }
