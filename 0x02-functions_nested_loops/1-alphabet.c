@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * main function start the program
+ * print single char
  *
- *
- * return nothing if its successful
+ *reutrn single char
  *
  */
 void print_alphabet(void)
@@ -13,6 +12,7 @@ void print_alphabet(void)
 	for (c = 'a'; c <= 'z'; c++)
 	{
 		_putchar(c);
-	}	
-	return (0);
+	}
+
+	_putchar('\n');
 }
