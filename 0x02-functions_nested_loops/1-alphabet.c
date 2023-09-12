@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * print single char
+ * print_alphabet - single char
  *
- *reutrn single char
- *
+ * Return: single chars
  */
 void print_alphabet(void)
 {
