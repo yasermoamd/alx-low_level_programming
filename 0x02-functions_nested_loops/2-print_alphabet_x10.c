@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_alphabet - single char
+ * print_alphabet_x10 - single char 10 times
  *
- * Return: single chars
+ * Return: nothing if it's successfull
  */
 void print_alphabet_x10(void)
 {
