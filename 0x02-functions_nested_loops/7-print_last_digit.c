@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- *  print_last_digit = Print last digit of a number
+ * print_last_digit - Print last digit of a number
+ *@a: Type int a and @b type int b
  *
- *  @a Type int a and @x type int x
- *
- *  Return: the vaule of the last digit
+ * Return: the vaule of the last digit
  */
 int print_last_digit(int a)
 {
