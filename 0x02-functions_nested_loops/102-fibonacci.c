@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long x, y, sum, i;
+	long fb1, fb2, sum, counter;
 
 	x = 0;
 	y = 1;
@@ -15,7 +15,7 @@ int main(void)
 		sum = x + y;
 		x = y;
 		y = sum;
-		if (counter != 49)
+		if (i != 49)
 			printf("%ld, ", sum);
 		else
 			printf("%ld\n", sum);
