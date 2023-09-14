@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long fb1, fb2, sum, counter;
+	long x, y, sum, counter;
 
 	x = 0;
 	y = 1;
