@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * _isupper - checks for uppercase 
- *@C: variable c 
+ * _isupper - checks for uppercase
+ * @c: variable c
  *
  * Return: 1 if c is uppercase, 0 otherwise
  */
