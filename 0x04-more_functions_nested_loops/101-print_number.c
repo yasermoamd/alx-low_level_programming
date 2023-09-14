@@ -1,26 +1,35 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entery Point
+ * print_number - check the function code
  *
- * description: numbersfactor
+ * @n: variables
  *
- * Return: 0
+ * Return: Always
  */
 
-int main(void)
+void print_number(int n)
 {
-	long int i = 612852475143;
-	long int factors;
 
-	for (factors = 2; factors < i; factors++)
+	unsigned int integer = n;
+
+	if  (n < 0)
 	{
-		if (i % factors == 0)
-		{
-			i /= factors;
-		}
+		integer = -n;
+		_putchar('-');
 	}
 
-	printf("%ld\n", factors);
-	return (0);
+	else
+	{
+		integer = n;
+	}
+
+	if (integer / 10)
+	{
+		print_number(integer / 10);
+	}
+
+	_putchar((integer % 10) + '0');
 }
+
