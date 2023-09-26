@@ -12,7 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	char *s_start = s;
 	char *accept_ptr;
-	
+
 	while (*s)
 	{
 		accept_ptr = accept;
@@ -30,5 +30,5 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		s++;
 	}
-	return (unsigned int)(s - s_start);
+	return ((unsigned int)(s - s_start));
 }
