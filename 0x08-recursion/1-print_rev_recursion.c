@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * reverse_string_recursively - Outputs a string in reversed order.
- * @str: input string
- * Return: None.
+ * _print_rev_recursion - Print a string in reverse.
+ * @s: type string
+ * Return: Always 0.
  */
-void reverse_string_recursively(char *str)
+void _print_rev_recursion(char *s)
 {
-	if (*str != '\0')
+	if (*s != '\0')
 	{
-		reverse_string_recursively(str + 1);
-		_putchar(*str);
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
 }
-
