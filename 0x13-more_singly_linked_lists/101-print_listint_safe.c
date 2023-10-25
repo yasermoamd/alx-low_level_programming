@@ -8,9 +8,9 @@
  * @list: the old list to append
  * @size: size of the new list (always one more than the old list)
  * @new: new node to add to the list
+ *
  * Return: pointer to the new list
  */
-
 const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 {
 	const listint_t **newls;
@@ -22,12 +22,8 @@ const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 		free(list);
 		exit(98);
 	}
-
 	for (j = 0; j < size - 1; j++)
-	{
 		newls[j] = list[j];
-	}
-
 	newls[j] = new;
 	free(list);
 	return (newls);
@@ -35,18 +31,18 @@ const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 
 /**
  * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to the start of the list.
- * Return: the number of nodes in the list.
+ * @head: pointer to the start of the list
+ *
+ * Return: the number of nodes in the list
  */
-
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t num = 0;
+	size_t j, num = 0;
 	const listint_t **list = NULL;
 
 	while (head != NULL)
 	{
-		for (size_t j = 0; j < num; j++)
+		for (j = 0; j < num; j++)
 		{
 			if (head == list[j])
 			{
@@ -55,14 +51,11 @@ size_t print_listint_safe(const listint_t *head)
 				return (num);
 			}
 		}
-
 		num++;
 		list = _r(list, num, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
-
 	free(list);
 	return (num);
 }
-
