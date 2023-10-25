@@ -2,8 +2,9 @@
 
 /**
  * add_nodeint -  function that adds a new node at the beginning of a list.
- * @n: 
- * Return: 
+ * @n: int add the list.
+ * @head: list of int.
+ * Return: NULL or Fialed.
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
