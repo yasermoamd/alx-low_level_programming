@@ -4,6 +4,7 @@
  * flip_bits - Count differing bits between two numbers.
  * @n: The first number.
  * @m: The second number.
+ * Return:
  * The count of differing bits, representing the number of bits that
  * need to be flipped to transition from 'n' to 'm'.
  */
