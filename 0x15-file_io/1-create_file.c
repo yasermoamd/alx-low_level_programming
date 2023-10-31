@@ -9,19 +9,24 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int open_file, write_file;
+	int open_file;
+	int len;
 
-	if (filename == NULL)
+	if (!filename)
 	{
 		return (-1);
 	}
 
-	open_file = open(filename, O_RDWR | O_TRUNC, 0600);
-	write_file = write(open_file, text_content, _strlen(text_content));
+	open_file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
-	if (open_file == -1 || write_file == -1)
+	if (open_file == -1)
 		return (-1);
 
+	if (text_content)
+	{
+		len = _strlen(text_content);
+		write(open_file, text_content, len);
+	}
 	close(open_file);
 	return (1);
 }
