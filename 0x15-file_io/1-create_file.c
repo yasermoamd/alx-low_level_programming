@@ -10,30 +10,35 @@
 int create_file(const char *filename, char *text_content)
 {
 	int open_file, write_file;
-	struct stat st;
 
 	if (filename == NULL)
 	{
 		return (-1);
 	}
-	if (stat(filename, &st) == 0)
-	{
-		open_file = open(filename, O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
-	}
-	else
-		open_file = open(filename, O_RDWR | O_CREAT | S_IRUSR | S_IWUSR);
-	if (open_file == -1)
-		return (-1);
-	if (text_content != NULL)
-	{
-		write_file = write(open_file, text_content, strlen(text_content));
 
-		while (write_file == -1)
-		{
-			close(open_file);
-			return (-1);
-		}
-	}
+	open_file = open(filename, O_RDWR | O_TRUNC, 0600);
+	write_file = write(open_file, text_content, _strlen(text_content));
+
+	if (open_file == -1 || write_file == -1)
+		return (-1);
+
 	close(open_file);
 	return (1);
+}
+
+/**
+ * _strlen - Returns the lenght of a string.
+ * @s: Type char pointer
+ * Return: Always 0.
+ */
+
+int _strlen(char *s)
+{
+	int c;
+
+	for (c = 0; s[c] != 0; c++)
+	{
+	}
+		return (c);
+
 }
