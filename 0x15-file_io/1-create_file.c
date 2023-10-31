@@ -24,26 +24,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		len = _strlen(text_content);
+		len = strlen(text_content);
 		write(open_file, text_content, len);
 	}
 	close(open_file);
 	return (1);
-}
-
-/**
- * _strlen - Returns the lenght of a string.
- * @s: Type char pointer
- * Return: Always 0.
- */
-
-int _strlen(char *s)
-{
-	int c;
-
-	for (c = 0; s[c] != 0; c++)
-	{
-	}
-		return (c);
-
 }
