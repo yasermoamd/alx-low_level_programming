@@ -10,13 +10,16 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int j;
 
-	for (j = 0; j < index && head->next; j++)
-	{
-		head = head->next;
-	}
-	if (j < index)
-		return (NULL);
-	return (head);
+	dlistint_t *current = head;
 
+	while (current != NULL)
+	{
+		if (count == index)
+			return (current);
+		j++;
+		current = current->next;
+	}
+	return (NULL);
 }
+
 
