@@ -1,11 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - function add an element to a hash table.
- * @ht: ht is the hashtable want to key/value in it.
- * @key: is the key - cannot be empty string.
- * @value: is the value associated with he key.
- * Return: 1 if succeeded, 0 otherwise
+ * hash_table_set - Add or update an element in a hash table.
+ * @ht: A pointer to the hash table.
+ * @key: The key to add - cannot be an empty string.
+ * @value: The value associated with key.
+ * Return: Upon failure - 0. Otherwise - 1.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -27,12 +27,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(ht->array[i]->value);
 			ht->array[i]->value = value_copy;
-				return (1);
+			return (1);
 		}
 	}
 
-	new = malloc(sizeof(hash_table_t));
+	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
+	{
+		free(value_copy);
+		return (0);
+	}
+	new->key = strdup(key);
+	if (new->key == NULL)
 	{
 		free(new);
 		return (0);
@@ -43,4 +49,3 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	return (1);
 }
-
