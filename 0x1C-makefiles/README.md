@@ -39,7 +39,3 @@ What you should learn from this project:
 ### [6. make -f 100-Makefile](./100-Makefile)
 * Requirements:
 
----
-
-## Author
-* **Geoffrey Zoref** - [Gzoref](https://github.com/Gzoref)
